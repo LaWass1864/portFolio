@@ -8,10 +8,11 @@ const Background = () => {
 
     const renderStars = () => {
         const stars = [];
-        for (let i = 0; i < 100; i++) { // Vous pouvez ajuster le nombre d'étoiles ici
+        for (let i = 0; i < 120; i++) { 
+            // Vous pouvez ajuster le nombre d'étoiles ici
             const style = {
                 top: `${Math.random() * 100}%`, // Position aléatoire en pourcentage
-                left: `${Math.random() * 100}%`, // Position aléatoire en pourcentage
+                left: `${Math.random() * 300}%`, // Position aléatoire en pourcentage
             };
             stars.push(<div key={i} className="star" style={style}></div>);
         }

@@ -1,44 +1,38 @@
-// _background-styles.scss
-
-.day {
-    background-image: linear-gradient(to right top, #1874ff, #009dff, #00bdfb, #74d7ee, #c3eded);
-}
-
-.evening {
-    background-image: linear-gradient(to bottom, #382749, #362848, #352947, #332945, #322a44, #3d2d4e, #4a2f57, #59305e, #812c66, #aa1f61, #cf1050, #e92132);
-}
-
 .night {
     background-image: linear-gradient(to bottom, #132227, #14252b, #14282f, #152c33, #152f37, #153039, #15303a, #15313c, #15303b, #152e3a, #142d38, #142c37);
-
+  
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      /* Garder les animations pour le scintillement */
+      animation: twinkling 3s infinite;
+    }
+  
+    .star:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      animation-delay: 1s; /* Ajouter un délai initial aléatoire */
+    }
+  
+    .star:nth-child(2) {
+      top: 50%;
+      left: 30%;
+      animation-delay: 2s; /* Ajouter un délai initial aléatoire */
+    }
+  
+    .star:nth-child(3) {
+      top: 80%;
+      left: 70%;
+      animation-delay: 0.5s; /* Ajouter un délai initial aléatoire */
+    }
+  
     @keyframes twinkling {
-        0% { opacity: 0; transform: translateY(0); }
-        10% { opacity: 1; transform: translateY(-20px); }
-        100% { opacity: 0; transform: translateY(-200px); }
-      }
-      
-      .star {
-        position: absolute;
-        width: 2px;
-        height: 2px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        animation: twinkling 3s infinite;
-      }
-      
-      .star:nth-child(1) {
-        top: 20%;
-        left: 10%;
-      }
-      
-      .star:nth-child(2) {
-        top: 50%;
-        left: 30%;
-      }
-      
-      .star:nth-child(3) {
-        top: 80%;
-        left: 70%;
-      }
-      
-}
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  }
+  

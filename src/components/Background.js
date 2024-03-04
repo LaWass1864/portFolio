@@ -26,7 +26,7 @@ const Background = () => {
             if (currentTime >= 6 && currentTime < 17) {
                 setBackground.classList.add("day")
             } else if (currentTime >= 17 && currentTime < 22) {
-                setBackground.classList.add("evening")
+                setBackground.classList.add("sunset")
             } else {
                 setBackground.classList.add("night")
             }

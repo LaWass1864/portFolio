@@ -8,7 +8,7 @@ const Background = () => {
 
     const renderStars = () => {
         const stars = [];
-        for (let i = 0; i < 120; i++) { 
+        for (let i = 0; i < 120; i++) {
             // Vous pouvez ajuster le nombre d'étoiles ici
             const style = {
                 top: `${Math.random() * 100}%`, // Position aléatoire en pourcentage
@@ -31,24 +31,21 @@ const Background = () => {
                 setBackground.classList.add("night")
             }
         };
-
+        //  on joue la fonction changeBackground
         changeBackground();
-
+        // une temporalité qui relance la fonction
         const interval = setInterval(changeBackground, 60 * 60 * 1000);
-
         return () => clearInterval(interval);
 
-    
-        
     },);
 
     return (
         <div className='container'>
-        <div className="day">
+            <div className="day">
+            </div>
+            <div className="evening"></div>
+            <div className="night-sky">{renderStars()}</div>
         </div>
-        <div className="evening"></div>
-        <div className="night-sky">{renderStars()}</div>
-    </div>
     );
 };
 

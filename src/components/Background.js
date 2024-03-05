@@ -5,7 +5,7 @@ import '../styles/components/_background-styles.scss';
 
 const Background = () => {
     const setBackground = document.querySelector("body");
-
+    //  faire en sorte d'avoir plusieurs etoiles pour le .night
     const renderStars = () => {
         const stars = [];
         for (let i = 0; i < 120; i++) {
@@ -17,6 +17,19 @@ const Background = () => {
             stars.push(<div key={i} className="star" style={style}></div>);
         }
         return stars;
+    };
+
+    // faire en sorte d'avoir plusieur nuage pour le .day
+    const renderClouds = () => {
+        const clouds = [];
+        for (let i = 0; i < 8; i++) {
+            const style = {
+                top: `${Math.random() * 100}%`, // Position aléatoire en pourcentage (environ en haut de la page)
+                left: `${Math.random() * 100}%`, // Position aléatoire en pourcentage
+            };
+            clouds.push(<div key={i} className="cloud" style={style}></div>);
+        }
+        return clouds;
     };
 
     useEffect(() => {
@@ -41,7 +54,9 @@ const Background = () => {
 
     return (
         <div className='container'>
-            <div className="day">
+            <div className="day" id="dayBackground">
+                <div className="sun"></div>
+                {renderClouds()}
             </div>
             <div className="evening"></div>
             <div className="night-sky">{renderStars()}</div>

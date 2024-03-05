@@ -1,3 +1,4 @@
+// Arriére plan nuit
 .night {
     background-image: linear-gradient(to bottom, #132227, #14252b, #14282f, #152c33, #152f37, #153039, #15303a, #15313c, #15303b, #152e3a, #142d38, #142c37);
   
@@ -36,14 +37,94 @@
     }
   }
   
+// arriére plan en journée
+.day {
+  background-image: linear-gradient(to bottom, #87ceeb, #87cefa, #add8e6, #b0e0e6, #b0e0e6, #b0e0e6, #b0e0e6, #b0e0e6);
+  position: relative; /* Assure que les éléments positionnés à l'intérieur soient positionnés par rapport à cet élément */
+}
 
-  .day {
-    background-image: linear-gradient(to bottom, #87ceeb, #87cefa, #add8e6, #b0e0e6, #b0e0e6, #b0e0e6, #b0e0e6, #b0e0e6);
+/* Soleil */
+.day .sun {
+  background-color: #ffd700; /* Jaune */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px; /* Ajustez la position verticale selon vos besoins */
+  left: 50px; /* Ajustez la position horizontale selon vos besoins */
+  z-index: 1; /* Assure que le soleil soit au-dessus du fond */
+  /* Effet de brillance */
+  box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700, 0 0 80px #ffd700;
+  animation: shine 2s linear infinite;
+}
+
+/* Nuages */
+/* Animation de mouvement des nuages */
+@keyframes moveCloud {
+  0% {
+    transform: translateX(0);
   }
-  
+  50% {
+    transform: translateX(20px); /* Décalage de 20px vers la droite */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Nuages */
+.day .cloud {
+  background-color: #ffffff; /* Blanc */
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 90px; /* Ajustez la position verticale selon vos besoins */
+  left: 200px; /* Ajustez la position horizontale selon vos besoins */
+  z-index: 1; /* Assure que les nuages soient au-dessus du fond */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce aux nuages */
+  margin-top: 50px;
+  animation: moveCloud 5s ease-in-out infinite; /* Appliquer l'animation à tous les nuages */
+}
+
+/* Reste du style des nuages */
+.day .cloud::before,
+.day .cloud::after {
+  content: '';
+  background-color: #ffffff; /* Blanc */
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.day .cloud::before {
+  top: -15px;
+  left: 20px;
+}
+
+.day .cloud::after {
+  top: 10px;
+  left: 40px;
+
+  /* Media queries pour ajuster le nombre de nuages */
+@media screen and (max-width: 768px) {
+  /* Masquer certains nuages pour les écrans plus petits */
+  .day .cloud:nth-child(n+4) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    /* Masquer tous les nuages pour les écrans encore plus petits */
+    .day .cloud {
+      display: none;
+    }
+  }
+}
+}
+
 
     .sunset {
         background-image: linear-gradient(to bottom, #ffcc00, #ff6600, #ff3300, #ff0000, #cc0000, #990000, #660000, #330000);
       }
       
-  
+    

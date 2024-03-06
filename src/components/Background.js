@@ -1,37 +1,41 @@
-import React from 'react';
-
+import React, { useEffect, useRef } from 'react';
 
 const Background = () => {
-    document.addEventListener('DOMContentLoaded', () => {
-        const interBubble = document.querySelector('.interactive')
+    const interBubbleRef = useRef(null);
+
+    useEffect(() => {
+        const interBubble = interBubbleRef.current;
         let curX = 0;
         let curY = 0;
         let tgX = 0;
         let tgY = 0;
 
-
         function move() {
             curX += (tgX - curX) / 20;
             curY += (tgY - curY) / 20;
             interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-            requestAnimationFrame(() => {
-                move();
-            });
+            requestAnimationFrame(move);
         }
 
-        window.addEventListener('mousemove', (e) => {
+        function handleMouseMove(e) {
             tgX = e.clientX;
             tgY = e.clientY;
-        })
+        }
+
+        window.addEventListener('mousemove', handleMouseMove);
 
         move();
-    })
-    return (
 
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    return (
         <div className='gradient-bg'>
-             <div class="text-container">
-    Bubbles
-  </div>
+            <div className="text-container">
+                Bubbles
+            </div>
             <svg xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <filter id="goo">
@@ -47,8 +51,8 @@ const Background = () => {
                 <div className="g3"></div>
                 <div className="g4"></div>
                 <div className="g5"></div>
-                {/* pour suivre la souris */}
-                <div className="interactive"></div>
+                {/* Utilisation de la référence au lieu de la classe pour sélectionner l'élément */}
+                <div ref={interBubbleRef} className="interactive"></div>
             </div>
         </div>
     );

@@ -1,3 +1,5 @@
+
+
 :root {
   --color-bg1: rgb(108, 0, 162);
   --color-bg2: rgb(0, 17, 82);
@@ -73,6 +75,8 @@
 }
 
 .gradient-bg {
+position: absolute;
+z-index: -1;
   width: 100vw;
   height: 100vh;
   position: absolute;

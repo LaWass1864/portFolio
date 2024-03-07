@@ -34,7 +34,7 @@ const Background = () => {
     return (
         <div className='gradient-bg'>
             <div className="text-container">
-                Bubbles
+               
             </div>
             <svg xmlns="http://www.w3.org/2000/svg">
                 <defs>

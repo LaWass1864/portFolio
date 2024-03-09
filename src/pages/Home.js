@@ -5,9 +5,11 @@ const Home = () => {
     return (
         <div>
             <Background />
-            <div className="content">
-                <h1>Bienvenue sur mon Portfolio</h1>
-                <h2>Développeuse Front-End et UX Design</h2>
+            <div className="center-container">
+            <div className="text-container">
+               <h1> Bienvenue sur mon portfolio </h1>
+               <p> Développeuse React & Ux designer</p>
+            </div>
             </div>
         </div>
 

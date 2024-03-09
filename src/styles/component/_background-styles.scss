@@ -1,5 +1,3 @@
-
-
 :root {
   --color-bg1: rgb(108, 0, 162);
   --color-bg2: rgb(0, 17, 82);
@@ -13,22 +11,23 @@
   --blending: hard-light;
 }
 
+.center-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .text-container {
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  font-size: 96px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
   color: white;
   opacity: 0.8;
   user-select: none;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 
 // animation
 
@@ -75,8 +74,8 @@
 }
 
 .gradient-bg {
-position: absolute;
-z-index: -1;
+  position: absolute;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
   position: absolute;

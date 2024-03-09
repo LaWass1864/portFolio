@@ -26,6 +26,39 @@
   opacity: 0.8;
   user-select: none;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  font-family: $font1;
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .text-container h1 {
+      font-size: 1.2em;
+      /* Taille de la police pour les écrans jusqu'à 768px de largeur pour h1 */
+    }
+
+    .text-container p {
+      font-size: 0.9em;
+      /* Taille de la police pour les écrans jusqu'à 768px de largeur pour p */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .text-container h1 {
+      font-size: 1em;
+      /* Taille de la police pour les écrans jusqu'à 480px de largeur pour h1 */
+    }
+
+    .text-container p {
+      font-size: 0.8em;
+      /* Taille de la police pour les écrans jusqu'à 480px de largeur pour p */
+    }
+  }
 }
 
 

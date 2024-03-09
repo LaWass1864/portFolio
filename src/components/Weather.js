@@ -70,7 +70,7 @@ const Weather = () => {
                 <div className='weatherContainer'>
                     <h2>{weatherData.name}</h2>              
                     <div className="temperatureIcon">
-                    <h3>{weatherData.main.temp.toFixed(1)} °C</h3>                
+                    <h3>{weatherData.main.temp.toFixed(1)}°</h3>                
                     <p>{getWeatherIcon(weatherData.weather[0].id)}</p>
                     </div>
                     <em>{weatherData.weather[0].description}</em>              

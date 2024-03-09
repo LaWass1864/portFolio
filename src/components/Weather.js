@@ -24,7 +24,7 @@ const Weather = () => {
                 .then((res) => {
                     setWeatherData(res.data);
                     setLoading(false);
-                    console.log(res.data);
+               
                 })
                 .catch((err) => {
                     setError(err);
@@ -68,10 +68,12 @@ const Weather = () => {
         <div>
             {weatherData && (
                 <div className='weatherContainer'>
-                    <p>{weatherData.main.temp.toFixed(1)} °C</p>                
-                    <p>{weatherData.weather[0].description}</p>              
-                    <p>{weatherData.name}</p>              
+                    <h2>{weatherData.name}</h2>              
+                    <div className="temperatureIcon">
+                    <h3>{weatherData.main.temp.toFixed(1)} °C</h3>                
                     <p>{getWeatherIcon(weatherData.weather[0].id)}</p>
+                    </div>
+                    <em>{weatherData.weather[0].description}</em>              
                 </div>
             )}
         </div>

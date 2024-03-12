@@ -1,6 +1,6 @@
 import React from 'react';
 import Background from '../components/Background'
-import Weather from '../components/Weather';
+
 
 const Home = () => {
     return (
@@ -12,8 +12,7 @@ const Home = () => {
                <p> Développeuse React & Ux designer</p>
             </div>
             </div>
-            {/* Température */}
-            <Weather />
+     
         </div>
 
 

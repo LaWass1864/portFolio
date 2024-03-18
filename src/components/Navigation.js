@@ -22,7 +22,7 @@ const Navigation = () => {
                         whileTap={{ scale: 0.9 }} // Animation au clic
                         className={location.pathname === '/Accueil' ? 'active' : ''}
                     >
-                        Accueil
+                     
                     </motion.li>
                 </NavLink>
 

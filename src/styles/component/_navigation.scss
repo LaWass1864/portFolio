@@ -1,0 +1,29 @@
+.navigation {
+  height: 60px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: capitalize;
+      line-height: 50px;
+      position: relative;
+ 
+    }
+
+    .active {
+      color: orange; // Couleur du texte pour l'élément actif
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    height: 50px;
+    width: 50px;
+  }
+}

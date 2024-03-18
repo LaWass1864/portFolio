@@ -17,8 +17,20 @@ $font2: "Poppins", sans-serif;
   outline: none;
   border: none;
   text-decoration: none;
- 
+
 }
+
+body {
+  font-family: $font2;
+
+}
+
+// page accueil
+.background-accueil {
+  background-color: #39375B;
+}
+
+//  bouton page d'accueil 
 .square_btn {
   position: relative;
   display: inline-block;

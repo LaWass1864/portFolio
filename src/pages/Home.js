@@ -2,6 +2,7 @@ import React from 'react';
 import Background from '../components/Background'
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
     return (
         <div>
@@ -10,8 +11,8 @@ const Home = () => {
                 <div className="text-container">
                     <h1> Bienvenue sur mon portfolio </h1>
                     <p> Développeuse front-end</p>
-                    <Link to="/page1">
-                        <button className='square_btn'>Entrer dans cette page</button>
+                    <Link to="/Accueil">
+                        <button className='square_btn'>Entrer</button>
                     </Link>
                 </div>
             </div>

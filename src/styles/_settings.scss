@@ -20,12 +20,12 @@ $font2: "Poppins", sans-serif;
 }
 
 body {
-  font-family: $font2;  
-  height: 100vh;
+  font-family: $font2;
+
   overflow: hidden;
 
   .accueil-background {
-    background:#39375B;
+    background: #39375B;
     min-height: 100vh;
   }
 
@@ -55,4 +55,48 @@ body {
 
 .square_btn:hover {
   background: #91b5fb;
+}
+
+
+// Page accueil 
+.mainContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  padding: 80px;
+    
+
+    h1 {
+      font-size: 56px;
+      color: white;
+
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      max-width: 85%; /* Redimensionne l'image pour qu'elle soit responsive */
+      height: auto; /* Permet à la hauteur de l'image de s'ajuster automatiquement */
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 100%; /* Une seule colonne pour les écrans de téléphone */
+    
+    .left,
+    .right {
+      width: 100%; /* Les sections prennent toute la largeur */
+    }
+  }
 }

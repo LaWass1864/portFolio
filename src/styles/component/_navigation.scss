@@ -5,21 +5,22 @@
   margin-left: auto;
   margin-right: auto;
 
-
   ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+
     li {
       display: inline-block;
       margin-right: 20px;
       font-weight: 600;
       font-size: 15px;
+      font-family: $font1;
       text-transform: capitalize;
       line-height: 50px;
       position: relative;
- 
+      color: white;
+
     }
 
     .active {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Accueil from './pages/Accueil';
 import Contact from './pages/Contact';
@@ -11,23 +11,12 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Navigate to="/Home" />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/Accueil" element={<>
-          <Navigation /> {/* Inclure la Navigation sur toutes les pages sauf /Home */}
-          <Accueil />
-        </>} />
-        <Route path="/Contact" element={<>
-          <Navigation />
-          <Contact />
-        </>} />
-        <Route path="/APropos" element={<>
-          <Navigation />
-          <Apropos />
-        </>} />
-        <Route path="/Projets" element={<>
-          <Navigation />
-          <Projets />
-        </>} />
+        <Route path="/Accueil" element={<Accueil />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/APropos" element={<Apropos />} />
+        <Route path="/Projets" element={<Projets />} />
         {/* Ajoutez d'autres routes ici */}
       </Routes>
     </Router>

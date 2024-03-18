@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 const Accueil = () => {
     return (
         <main className="accueil-background">
-<Navigation />
+            <Navigation />
             <div className='mainContainer'>
                 <div className="left">
                     <h1> Hello, je suis Wassila</h1>

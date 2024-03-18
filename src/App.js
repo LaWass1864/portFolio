@@ -10,17 +10,26 @@ import Home from './pages/Home';
 const App = () => {
   return (
     <Router>
-      <div>
-        <Navigation />
-        <Routes>
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Accueil" element={<Accueil />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/APropos" element={<Apropos />} />
-          <Route path="/Projets" element={<Projets />} />
-          {/* Ajoutez d'autres routes ici */}
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Accueil" element={<>
+          <Navigation /> {/* Inclure la Navigation sur toutes les pages sauf /Home */}
+          <Accueil />
+        </>} />
+        <Route path="/Contact" element={<>
+          <Navigation />
+          <Contact />
+        </>} />
+        <Route path="/APropos" element={<>
+          <Navigation />
+          <Apropos />
+        </>} />
+        <Route path="/Projets" element={<>
+          <Navigation />
+          <Projets />
+        </>} />
+        {/* Ajoutez d'autres routes ici */}
+      </Routes>
     </Router>
   );
 };

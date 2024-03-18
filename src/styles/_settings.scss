@@ -80,13 +80,8 @@ body {
     }
   }
 
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 60%;
-    
-    .left,
-    .right {
-      width: 100%;
-      padding: 20px;
-    }
-  }
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+@media screen and (max-width: 640px) {
+  grid-template-columns: 100%;
+}
 }

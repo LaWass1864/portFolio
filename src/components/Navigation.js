@@ -7,7 +7,7 @@ const Navigation = () => {
     return (
         <div className="navigation">
             <ul>
-            <NavLink to="/" activeClassName="active">
+            <NavLink to="/Home" activeClassName="active">
                     <motion.li
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic

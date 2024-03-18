@@ -19,3 +19,26 @@ $font2: "Poppins", sans-serif;
   text-decoration: none;
  
 }
+.square_btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 7px 10px 10px 10px;
+  text-decoration: none;
+  color: #FFF;
+  background: #a180dc;
+  transition: .4s;
+  margin-top: 20px;
+  font-family: $font2;
+  padding: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.square_btn>span {
+  border-bottom: solid 2px #FFF;
+}
+
+.square_btn:hover {
+  background: #91b5fb;
+}

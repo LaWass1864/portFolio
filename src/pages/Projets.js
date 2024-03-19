@@ -1,13 +1,14 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-
+import CardCarousel from '../components/CardCarousel';
 
 const Projets = () => {
     return (
-        <div>
+        <main className='projets-background'>
             <Navigation />
-            <h1>Page projets</h1>
-        </div>
+            <CardCarousel />
+
+        </main>
     );
 };
 

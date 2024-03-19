@@ -8,22 +8,25 @@ $font2: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style-type: none;
-  outline: none;
-  border: none;
-  text-decoration: none;
 }
 
 body {
   font-family: $font2;
-
-
-  .accueil-background {
-    background: #39375B;
-    min-height: 100vh;
-  }
 }
 
+
+// background des pages
+.accueil-background {
+  background: #39375B;
+  min-height: 100vh;
+}
+
+.projets-background {
+  background: #136F63;
+  min-height: 100vh;
+}
+
+// page Home
 .square_btn {
   position: relative;
   display: inline-block;
@@ -39,7 +42,7 @@ body {
   border-radius: 14px;
   cursor: pointer;
 
-  > span {
+  >span {
     border-bottom: solid 2px #FFF;
   }
 
@@ -48,6 +51,7 @@ body {
   }
 }
 
+// page Accueil
 .mainContainer {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -80,8 +84,68 @@ body {
     }
   }
 
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
-@media screen and (max-width: 640px) {
-  grid-template-columns: 100%;
+  /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 100%;
+  }
 }
+
+// Page Projets
+.carousel-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Ajoutez une largeur pour le carrousel */
+  max-width: 1200px; /* Définissez une largeur maximale pour le carrousel si nécessaire */
+}
+
+.center {
+  text-align: center; /* Centre le contenu à l'intérieur du conteneur */
+}
+
+.center {
+  margin: 0 auto; /* Centre le carrousel horizontalement */
+  max-width: 1200px; /* Optionnel : définissez une largeur maximale pour le carrousel */
+}
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: auto; /* Définissez la hauteur désirée pour toutes les cartes */
+  width: 250px; /* Définissez la largeur désirée pour toutes les cartes */
+  display: flex; /* Utilisez flexbox pour aligner le contenu verticalement */
+  flex-direction: column; /* Alignez le contenu en colonnes */
+  justify-content: space-between; /* Espacement équivalent entre les éléments à l'intérieur de la carte */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  /* Optionnel : limitez le nombre de lignes pour éviter le débordement du texte */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card p {
+  margin-top: 10px;
+  /* Optionnel : limitez le nombre de lignes pour éviter le débordement du texte */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card .links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }

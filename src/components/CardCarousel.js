@@ -2,10 +2,11 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import LanguageColor from './Languagecolor';
 import db from '../db.json';
 
 const CardCarousel = () => {
+
     const settings = {
         dots: true,
         infinite: true,
@@ -33,15 +34,17 @@ const CardCarousel = () => {
     };
 
     return (
-        <div className="carousel-container"> {/* Utilisez la classe "carousel-container" pour le conteneur du carrousel */}
-            <div className="center"> {/* Utilisez la classe "center" pour centrer le carrousel */}
+        <div className="carousel-container">
+            <div className="center">
                 <Slider {...settings}>
                     {Object.values(db).map(projet => (
                         <div key={projet.nom} className="card">
                             <img src={projet.image} alt={projet.nom} />
                             <h2>{projet.nom}</h2>
-                            <p>{projet.description}</p>
-                            <p>Langages : {projet.langage}</p>
+                            <em>{projet.description}</em>
+                            <div className="languages">
+                            <LanguageColor language={projet.langages} />
+                            </div>
                             <div className="links">
                                 <a href={projet.lien_github} target="_blank" rel="noopener noreferrer">GitHub</a>
                                 <a href={projet.lien_site} target="_blank" rel="noopener noreferrer">Site Web</a>

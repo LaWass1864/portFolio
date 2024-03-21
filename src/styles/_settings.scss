@@ -12,6 +12,7 @@ $font2: "Poppins", sans-serif;
 
 body {
   font-family: $font2;
+  overflow-y: hidden;
 }
 
 
@@ -93,9 +94,9 @@ body {
 // Page Projets
 .carousel-container {
   position: absolute;
-  top: 50%;
+  top: 150px; /* Réglez cette valeur en fonction de la hauteur de votre barre de navigation */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 80%; /* Ajoutez une largeur pour le carrousel */
   max-width: 1200px; /* Définissez une largeur maximale pour le carrousel si nécessaire */
 }
@@ -114,20 +115,22 @@ body {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  height: auto; /* Définissez la hauteur désirée pour toutes les cartes */
-  width: 250px; /* Définissez la largeur désirée pour toutes les cartes */
-  display: flex; /* Utilisez flexbox pour aligner le contenu verticalement */
-  flex-direction: column; /* Alignez le contenu en colonnes */
-  justify-content: space-between; /* Espacement équivalent entre les éléments à l'intérieur de la carte */
+  max-width: 100%; /* Définissez la largeur maximale pour assurer la réactivité */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+
 .card img {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Définir la largeur sur 100% pour remplir la largeur de la carte */
+  height: 200px; /* Définir une hauteur fixe pour toutes les images */
+  object-fit: cover; /* Redimensionner l'image pour qu'elle couvre toute la zone définie */
   border-radius: 8px;
 }
 
 .card h2 {
+  text-align: left;
   font-size: 20px;
   margin-top: 10px;
   /* Optionnel : limitez le nombre de lignes pour éviter le débordement du texte */
@@ -136,16 +139,37 @@ body {
   white-space: nowrap;
 }
 
-.card p {
-  margin-top: 10px;
-  /* Optionnel : limitez le nombre de lignes pour éviter le débordement du texte */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.card em {
+  text-align: left;
 }
 
+.card p {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Limitez le paragraphe à 5 lignes */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 1.6; /* Définir la hauteur de chaque ligne de texte */
+ 
+}
 .card .links {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+// couleurs des badges des languages
+
+$color1 : #DEA54B;
+$color2: #D741A7;
+$color3: #3A1772;
+$color4: #5398BE;
+
+:export {
+  color1: $color1;
+  color2 : $color2;
+  color3 : $color3;
+  color4 :$color4;
 }

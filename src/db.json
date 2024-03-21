@@ -4,7 +4,7 @@
       "nom": "Cooking App",
       "image": "/assets/image/cookingApp.png",
       "description": "La Cooking App est une application web HTML/CSS/ReactJS intégrant une API de recettes. Avec une barre de recherche intuitive, elle permet aux utilisateurs d'explorer une variété de recettes, offrant ainsi une expérience culinaire interactive et personnalisée.",
-      "langages": "Html,Sass,Javascript,ReactJs,Api",
+      "langages": ["Html,Sass,Javascript,ReactJs,Api"],
       "lien_github": "https://github.com/LaWass1864/Cook-app",
       "lien_site": "https://cosmic-cook.netlify.app"
     },
@@ -12,7 +12,7 @@
       "nom": "La montagne",
       "image": "/assets/image/lamontagne.png",
       "description": "un site web dynamique mettant en valeur des photos de montagnes. Conçu avec HTML, SCSS et les puissants modèles de mise en page Flexbox et Grid, cette plateforme offre une expérience immersive pour les passionnés d'aventure. ",
-      "langages": "HTML, SASS",
+      "langages": ["HTML, SASS"],
       "lien_github": "https://github.com/LaWass1864/Lamontagne",
       "lien_site": "https://the-mountain-site.netlify.app"
     },
@@ -20,7 +20,7 @@
       "nom": "Mon Portfolio",
       "image": "/assets/image/monportfolio.png",
       "description": "une vitrine interactive de mes réalisations. Conçu avec JavaScript et ReactJS, mon portfolio est enrichi de librairies telles que Framer Motion pour des animations fluides et React Slick pour une navigation intuitive. Inspiré par une maquette élaborée sur Figma, ce portfolio offre une expérience utilisateur immersive, mettant en valeur mes compétences et projets de manière dynamique",
-      "langages": "HTML, SASS, JAVASCRIPT,REACTJS,LIBRAIRIES",
+      "langages": ["HTML, SASS, JAVASCRIPT,REACTJS,LIBRAIRIES"],
       "lien_github": "https://github.com/LaWass1864/portFolio",
       "lien_site": "https://portfoliobywass.netlify.app"
     },
@@ -28,7 +28,7 @@
       "nom": "WeatherApp",
       "image": "/assets/image/weatherapp.png",
       "description": "une application simple et efficace alimentée par l'API OpenWeatherMap. Développée avec JavaScript, React, Sass, et une API météo, Weather App affiche les prévisions météorologiques de votre ville, incluant la température actuelle. De plus, une fonctionnalité de barre de progression représente visuellement le cycle jour-nuit en fonction des heures de lever et de coucher du soleil",
-      "langages": "HTML, SASS, JAVASCRIPT,REACTJS,API",
+      "langages": ["HTML, SASS, JAVASCRIPT,REACTJS,API"],
       "lien_github": "https://github.com/LaWass1864/weather-app",
       "lien_site": "https://appweatherbywass.netlify.app"
     }

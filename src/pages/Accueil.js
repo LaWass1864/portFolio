@@ -1,5 +1,5 @@
 import React from 'react';
-import laptopGuy from '../assets/image/laptop-guy.png'
+
 import Navigation from '../components/Navigation';
 
 const Accueil = () => {
@@ -12,7 +12,7 @@ const Accueil = () => {
                     <p> Développeuse front-end</p>
                 </div>
                 <div className='right'>
-                    <img src={laptopGuy} alt="" />
+                    <img src="/assets/image/laptop-guy.png" alt="Laptop Guy" />
                 </div>
             </div>
         </main>

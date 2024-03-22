@@ -99,12 +99,29 @@ body {
   transform: translateX(-50%);
   width: 80%;
   max-width: 1200px;
+
+  .description {
+    font-weight: 400;
+    height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    /* Largeur fine */
+    scrollbar-color: yellow;
+    /* Couleur jaune */
+
+    .description::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+
 }
 
 .langages-container {
   display: flex;
   justify-content: left;
   gap: 10px;
+
 
   p {
     border-radius: 16px;
@@ -115,15 +132,15 @@ body {
 
     @media screen and (max-width: 768px) {
       .langages-container p {
-          font-size: 0.8em; 
+        font-size: 0.8em;
       }
-  }
-  
-  @media screen and (max-width: 480px) {
+    }
+
+    @media screen and (max-width: 480px) {
       .langages-container p {
-          font-size: 0.6em; 
+        font-size: 0.6em;
       }
-  }
+    }
   }
 }
 

@@ -48,7 +48,7 @@ const CardCarousel = () => {
                         <div key={projet.nom} className="card">
                             <img src={projet.image} alt={projet.nom} />
                             <h2>{projet.nom}</h2>
-                            <em>{projet.description}</em>
+                            <p className='description'>{projet.description}</p>
                             <span className='langages-container'>
                                 {projet.langages.map(langage => ( 
                                     <p key={langage} style={{ background: langColors[langage] }}>{langage}</p>

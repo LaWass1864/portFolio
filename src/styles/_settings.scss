@@ -27,6 +27,16 @@ body {
   min-height: 100vh;
 }
 
+.contact-background {
+  background : #39375B;
+  min-height: 100vh;
+}
+
+.apropos-background {
+  background-color: #F4FAFF;
+  min-height: 100vh;
+}
+
 // page Home
 .square_btn {
   position: relative;
@@ -189,3 +199,5 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+// Page contact

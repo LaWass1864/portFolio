@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Navigation = () => {
+const Navigation = ( ) => {
     const location = useLocation();
     return (
         <div className="navigation">
@@ -38,10 +38,11 @@ const Navigation = () => {
                     </motion.li>
                 </NavLink>
 
-                <NavLink to="/Apropos" activeclassname="active">
-                    <motion.li
-                        whileHover={{ scale: 1.1 }} // Animation au survol
-                        whileTap={{ scale: 0.9 }} // Animation au clic
+                <NavLink to="/Apropos" activeclassname="active" color='red'>
+                <motion.li
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        style={{ color: location.pathname === '/Apropos' ? 'blue' : '' }}
                         className={location.pathname === '/Apropos' ? 'active' : ''}
                     >
                         A propos

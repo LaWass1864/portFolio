@@ -5,10 +5,10 @@ import Navigation from '../components/Navigation';
 
 const Contact = () => {
     return (
-        <div>
+        <main className='contact-background'>
             <Navigation />
-            <h1>Page Contact</h1>
-        </div>
+            <h1>Contactez-moi</h1>
+        </main>
     );
 };
 

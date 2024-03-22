@@ -15,7 +15,19 @@ body {
   overflow-y: hidden;
 }
 
+// couleurs des badges des languages
 
+$color1 : #DEA54B;
+$color2: #D741A7;
+$color3: #3A1772;
+$color4: #5398BE;
+
+:export {
+  color1: $color1;
+  color2 : $color2;
+  color3 : $color3;
+  color4 :$color4;
+}
 // background des pages
 .accueil-background {
   background: #39375B;
@@ -160,16 +172,3 @@ body {
   justify-content: space-between;
 }
 
-// couleurs des badges des languages
-
-$color1 : #DEA54B;
-$color2: #D741A7;
-$color3: #3A1772;
-$color4: #5398BE;
-
-:export {
-  color1: $color1;
-  color2 : $color2;
-  color3 : $color3;
-  color4 :$color4;
-}

@@ -2,8 +2,11 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import LanguageColor from './Languagecolor';
+
 import db from '../db.json';
+import Languagecolor from './LanguageColor';
+
+
 
 const CardCarousel = () => {
 
@@ -43,7 +46,7 @@ const CardCarousel = () => {
                             <h2>{projet.nom}</h2>
                             <em>{projet.description}</em>
                             <div className="languages">
-                            <LanguageColor language={projet.langages} />
+                            <Languagecolor language={projet.langages} />
                             </div>
                             <div className="links">
                                 <a href={projet.lien_github} target="_blank" rel="noopener noreferrer">GitHub</a>

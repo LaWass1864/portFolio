@@ -94,34 +94,30 @@ body {
 // Page Projets
 .carousel-container {
   position: absolute;
-  top: 150px;
+  top: 10%; /* Utilisation de pourcentage pour le positionnement */
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 90%; /* Utilisation de pourcentage pour la largeur */
   max-width: 1200px;
 
   .description {
     font-weight: 400;
-    height: 150px;
+    max-height: 150px; /* Utilisation de max-height au lieu de height */
     overflow-y: auto;
     margin-bottom: 10px;
     scrollbar-width: thin;
-    /* Largeur fine */
     scrollbar-color: yellow;
-    /* Couleur jaune */
 
     .description::-webkit-scrollbar-button {
       display: none;
     }
   }
-
 }
 
 .langages-container {
   display: flex;
   justify-content: left;
   gap: 10px;
-
 
   p {
     border-radius: 16px;
@@ -131,26 +127,18 @@ body {
     font-size: 0.8em;
 
     @media screen and (max-width: 768px) {
-      .langages-container p {
-        font-size: 0.8em;
-      }
+      font-size: 0.8em; /* Pas besoin de .langages-container ici */
     }
 
     @media screen and (max-width: 480px) {
-      .langages-container p {
-        font-size: 0.6em;
-      }
+      font-size: 0.6em; /* Pas besoin de .langages-container ici */
     }
   }
 }
 
 .center {
   text-align: center;
-}
-
-.center {
-  margin: 0 auto;
-  max-width: 1200px;
+  max-width: 100%; /* Pour que le contenu ne dépasse pas la largeur maximale */
 }
 
 .card {
@@ -165,10 +153,9 @@ body {
   justify-content: space-between;
 }
 
-
 .card img {
   width: 100%;
-  height: 200px;
+  max-height: 200px; /* Utilisation de max-height pour éviter le débordement */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -195,7 +182,6 @@ body {
   -webkit-box-orient: vertical;
   line-height: 1.6;
   font-weight: bold;
-
 }
 
 .card .links {

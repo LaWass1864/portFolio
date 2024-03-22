@@ -15,19 +15,7 @@ body {
   overflow-y: hidden;
 }
 
-// couleurs des badges des languages
 
-$color1 : #DEA54B;
-$color2: #D741A7;
-$color3: #3A1772;
-$color4: #5398BE;
-
-:export {
-  color1: $color1;
-  color2 : $color2;
-  color3 : $color3;
-  color4 :$color4;
-}
 // background des pages
 .accueil-background {
   background: #39375B;
@@ -106,28 +94,43 @@ $color4: #5398BE;
 // Page Projets
 .carousel-container {
   position: absolute;
-  top: 150px; /* Réglez cette valeur en fonction de la hauteur de votre barre de navigation */
+  top: 150px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%; /* Ajoutez une largeur pour le carrousel */
-  max-width: 1200px; /* Définissez une largeur maximale pour le carrousel si nécessaire */
+  width: 80%;
+  max-width: 1200px;
+}
+
+.langages-container {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+
+  p {
+    border-radius: 16px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 10px;
+    
+  }
 }
 
 .center {
-  text-align: center; /* Centre le contenu à l'intérieur du conteneur */
+  text-align: center;
 }
 
 .center {
-  margin: 0 auto; /* Centre le carrousel horizontalement */
-  max-width: 1200px; /* Optionnel : définissez une largeur maximale pour le carrousel */
+  margin: 0 auto;
+  max-width: 1200px;
 }
+
 .card {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 100%; /* Définissez la largeur maximale pour assurer la réactivité */
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -135,9 +138,9 @@ $color4: #5398BE;
 
 
 .card img {
-  width: 100%; /* Définir la largeur sur 100% pour remplir la largeur de la carte */
-  height: 200px; /* Définir une hauteur fixe pour toutes les images */
-  object-fit: cover; /* Redimensionner l'image pour qu'elle couvre toute la zone définie */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -145,7 +148,6 @@ $color4: #5398BE;
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
-  /* Optionnel : limitez le nombre de lignes pour éviter le débordement du texte */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -159,16 +161,16 @@ $color4: #5398BE;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* Limitez le paragraphe à 5 lignes */
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-  line-height: 1.6; /* Définir la hauteur de chaque ligne de texte */
- 
+  line-height: 1.6;
+  font-weight: bold;
+
 }
+
 .card .links {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-

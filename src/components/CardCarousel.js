@@ -2,14 +2,18 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 import db from '../db.json';
-import Languagecolor from './LanguageColor';
 
-
+const langColors = {
+    "Html": "#e44d26",
+    "Sass": "#bf4080",
+    "Javascript": "#f7df1e",
+    "ReactJs": "#5cd9ff",
+    "Api": "#2a9d8f",
+    "Librairies": "#019d91"
+  };
 
 const CardCarousel = () => {
-
     const settings = {
         dots: true,
         infinite: true,
@@ -45,9 +49,11 @@ const CardCarousel = () => {
                             <img src={projet.image} alt={projet.nom} />
                             <h2>{projet.nom}</h2>
                             <em>{projet.description}</em>
-                            <div className="languages">
-                            <Languagecolor language={projet.langages} />
-                            </div>
+                            <span className='langages-container'>
+                                {projet.langages.map(langage => ( 
+                                    <p key={langage} style={{ background: langColors[langage] }}>{langage}</p>
+                                ))}
+                            </span>
                             <div className="links">
                                 <a href={projet.lien_github} target="_blank" rel="noopener noreferrer">GitHub</a>
                                 <a href={projet.lien_site} target="_blank" rel="noopener noreferrer">Site Web</a>
@@ -58,6 +64,6 @@ const CardCarousel = () => {
             </div>
         </div>
     );
-};
+}
 
 export default CardCarousel;

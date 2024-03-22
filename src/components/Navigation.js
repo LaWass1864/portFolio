@@ -8,7 +8,7 @@ const Navigation = () => {
         <div className="navigation">
             <ul>
                 {/* Exclure le lien vers la page Home */}
-                <NavLink to="/Accueil" activeClassName="active">
+                <NavLink to="/Accueil" activeclassname="active">
                     <motion.li
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic
@@ -18,7 +18,7 @@ const Navigation = () => {
                     </motion.li>
                 </NavLink>
 
-                <NavLink to="/Contact" activeClassName="active">
+                <NavLink to="/Contact" activeclassname="active">
                     <motion.li
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic
@@ -28,7 +28,7 @@ const Navigation = () => {
                     </motion.li>
                 </NavLink>
 
-                <NavLink to="/Projets" activeClassName="active">
+                <NavLink to="/Projets" activeclassname="active">
                     <motion.li
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic
@@ -38,7 +38,7 @@ const Navigation = () => {
                     </motion.li>
                 </NavLink>
 
-                <NavLink to="/Apropos" activeClassName="active">
+                <NavLink to="/Apropos" activeclassname="active">
                     <motion.li
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic

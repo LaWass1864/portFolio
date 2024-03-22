@@ -1,32 +1,20 @@
 import React from 'react';
-import colors from "../styles/_settings.scss";
+import CodeHighlighter from './CodeHighlighter'; // Importez le composant CodeHighlighter
 
-
-const Languagecolor = ({ language }) => {
-  let color;
-  switch (language) {
-    case 'Html':
-      color = colors.color1; // Utilisez la première couleur définie dans _colors.scss
-      break;
-    case 'Sass':
-      color = colors.color2; // Utilisez la deuxième couleur définie dans _colors.scss
-      break;
-    case 'javascript':
-      color = colors.color3; // Utilisez la troisième couleur définie dans _colors.scss
-      break;
-    case 'ReactJs':
-      color = colors.color4; // Utilisez la quatrième couleur définie dans _colors.scss
-      break;
-    // Ajoutez des cas pour d'autres langages si nécessaire
-    default:
-      color = '#000000'; // Utilisez une couleur par défaut si le langage n'est pas trouvé
-  }
-
+const LanguageColor = ({ languages }) => {
   return (
-    <p className='languages' style={{ color }}>
-      {language ? language : ""}
-    </p>
+    <div>
+      {languages && languages.length > 0 ? (
+        languages.map((language, index) => (
+          <div key={index}>
+            <CodeHighlighter code={language} language="html" /> {/* Remplacez "html" par le langage approprié */}
+          </div>
+        ))
+      ) : (
+        <span>-</span>
+      )}
+    </div>
   );
 };
 
-export default Languagecolor;
+export default LanguageColor;

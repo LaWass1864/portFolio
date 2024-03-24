@@ -13,6 +13,7 @@ $font2: "Poppins", sans-serif;
 body {
   font-family: $font2;
   overflow-y: hidden;
+
 }
 
 
@@ -28,7 +29,7 @@ body {
 }
 
 .contact-background {
-  background : #39375B;
+  background: #39375B;
   min-height: 100vh;
 }
 
@@ -65,8 +66,8 @@ body {
 // page Accueil
 .mainContainer {
   display: grid;
-  grid-template-columns: 40% 60%;
-  align-items: center;
+  grid-template-columns: 30% 70%;
+  justify-items: center;
 
 
   .left {
@@ -90,114 +91,213 @@ body {
     justify-content: flex-end;
 
     img {
-      max-width: 70%;
+      width: 80%;
       height: auto;
     }
   }
 
-  /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
-  @media screen and (max-width: 640px) {
-    grid-template-columns: 100%;
-  }
 }
 
 // Page Projets
-.carousel-container {
-  position: absolute;
-  top: 10%; /* Utilisation de pourcentage pour le positionnement */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%; /* Utilisation de pourcentage pour la largeur */
-  max-width: 1200px;
 
-  .description {
-    font-weight: 400;
-    max-height: 150px; /* Utilisation de max-height au lieu de height */
-    overflow-y: auto;
-    margin-bottom: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: yellow;
+.projets-background {
+  position: relative; // Assurez-vous que la position relative est définie sur le parent
 
-    .description::-webkit-scrollbar-button {
-      display: none;
-    }
-  }
-}
-
-.langages-container {
-  display: flex;
-  justify-content: left;
-  gap: 10px;
-
-  p {
-    border-radius: 16px;
+  h1 {
+    position: absolute; // Position absolue pour positionner le h1
+    top: 10%; // Ajustez la valeur en fonction de votre mise en page
+    left: 10%; // Ajustez la valeur en fonction de votre mise en page
     color: white;
-    padding: 4px 8px;
-    border-radius: 10px;
-    font-size: 0.8em;
+    font-size: 52px;
+    font-weight: bold;
+    
+  }
 
-    @media screen and (max-width: 768px) {
-      font-size: 0.8em; /* Pas besoin de .langages-container ici */
-    }
+  .carousel-container {
+    position: absolute;
+    top: 20%; // Augmenter la valeur pour déplacer le carrousel vers le bas
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    
 
-    @media screen and (max-width: 480px) {
-      font-size: 0.6em; /* Pas besoin de .langages-container ici */
+    .description {
+      font-weight: 400;
+      max-height: 150px;
+      /* Utilisation de max-height au lieu de height */
+      overflow-y: auto;
+      margin-bottom: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: yellow;
+
+      .description::-webkit-scrollbar-button {
+        display: none;
+      }
     }
   }
-}
 
-.center {
-  text-align: center;
-  max-width: 100%; /* Pour que le contenu ne dépasse pas la largeur maximale */
-}
+  .langages-container {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
 
-.card {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+    p {
+      border-radius: 16px;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: 0.8em;
 
-.card img {
-  width: 100%;
-  max-height: 200px; /* Utilisation de max-height pour éviter le débordement */
-  object-fit: cover;
-  border-radius: 8px;
-}
+      @media screen and (max-width: 768px) {
+        font-size: 0.8em;
+        /* Pas besoin de .langages-container ici */
+      }
 
-.card h2 {
-  text-align: left;
-  font-size: 20px;
-  margin-top: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+      @media screen and (max-width: 480px) {
+        font-size: 0.6em;
+        /* Pas besoin de .langages-container ici */
+      }
+    }
+  }
 
-.card em {
-  text-align: left;
-}
+  .center {
+    text-align: center;
+    max-width: 100%;
+    /* Pour que le contenu ne dépasse pas la largeur maximale */
+  }
 
-.card p {
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  line-height: 1.6;
-  font-weight: bold;
-}
+  .card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+height: auto;
+  }
 
-.card .links {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
+  .card img {
+    width: 100%; /* Assure que l'image occupe toute la largeur de la carte */
+    height: 200px; /* Réglez la hauteur de l'image */
+    object-fit: cover; /* Ajuste la taille de l'image sans déformer */
+    border-radius: 8px; 
+  }
+
+  .card h2 {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card em {
+    text-align: left;
+  }
+
+  .card p {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+
+  .card .links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 // Page contact
+.contact-container {
+  width: calc(100% - (largeur de la navigation)); // Remplacez "(largeur de la navigation)" par la valeur appropriée de la largeur de votre navigation
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+
+    h1 {
+      font-size: 52px;
+      color: white;
+    }
+
+    img {
+      width: 100%; // Modification de la largeur de l'image pour qu'elle s'adapte à la taille du conteneur
+      height: auto;
+    }
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px; // Ajout de rembourrage pour correspondre au padding du left-container
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 700px; // Définissez la largeur maximale du formulaire selon vos besoins
+      margin: 0 auto; // Pour centrer le formulaire horizontalement
+    }
+
+    label {
+      color: orange; // Couleur orange pour les labels
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: orange;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff0; // Couleur de fond jaune clair au survol
+    }
+  }
+
+  .success,
+  .error {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .success {
+    background: green;
+  }
+
+  .error {
+    background: red;
+  }
+}

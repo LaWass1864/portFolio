@@ -5,10 +5,10 @@ import CardCarousel from '../components/CardCarousel';
 const Projets = () => {
     return (
         <main className='projets-background'>
-            <Navigation />
-            <CardCarousel />
-
-        </main>
+        <Navigation />
+        <h1>Mes projets</h1> {/* Placer le h1 ici */}
+        <CardCarousel />
+    </main>
     );
 };
 

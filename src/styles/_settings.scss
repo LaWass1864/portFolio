@@ -301,3 +301,38 @@ height: auto;
     background: red;
   }
 }
+
+// Page a propos
+.circle-container {
+  position: absolute;
+  top: 50%; /* Centrer verticalement */
+  left: 50%; /* Centrer horizontalement */
+  transform: translate(-50%, -50%); /* Ajuster pour centrer correctement */
+  width: 300px; /* Largeur de l'ellipse */
+  height: 200px; /* Hauteur de l'ellipse */
+  border-radius: 50%; /* Pour dessiner une ellipse */
+  border: 1px solid black; /* Bordure du cercle */
+  background-color: #FFFFFF ;
+}
+
+.circle-item {
+  position: absolute;
+  width: 50px; /* Ajustez selon la taille de vos éléments */
+  height: 50px; /* Ajustez selon la taille de vos éléments */
+  border: 1px solid red; /* Style de la bordure */
+  border-radius: 50%;
+  --angle: 0; /* Angle initial */
+  top: calc(40% - 25px + 150px * sin(var(--angle))); /* Calcul de la position y */
+  left: calc(50% - 25px + 150px * cos(var(--angle))); /* Calcul de la position x */
+  transition: top 1s, left 1s; /* Transition pour l'animation */
+}
+
+.circle-item:nth-child(2) {
+  --angle: 120deg; /* Angle pour le deuxième élément */
+}
+
+.circle-item:nth-child(3) {
+  --angle: 240deg; /* Angle pour le troisième élément */
+}
+
+

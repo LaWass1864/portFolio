@@ -13,7 +13,7 @@ const Navigation = ({ currentPage }) => {
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic
                         className={location.pathname === '/Accueil' ? 'active' : ''}
-                        style={{ color: currentPage === '/Apropos' ? 'blue' : '' }}
+                        style={{ color: currentPage === '/Apropos' ? '#39375B' : '' }}
                     >
                         Accueil
                     </motion.li>
@@ -24,7 +24,7 @@ const Navigation = ({ currentPage }) => {
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic
                         className={location.pathname === '/Contact' ? 'active' : ''}
-                        style={{ color: currentPage === '/Apropos' ? 'blue' : '' }}
+                        style={{ color: currentPage === '/Apropos' ? '#39375B' : '' }}
                     >
                         Contact
                     </motion.li>
@@ -35,7 +35,7 @@ const Navigation = ({ currentPage }) => {
                         whileHover={{ scale: 1.1 }} // Animation au survol
                         whileTap={{ scale: 0.9 }} // Animation au clic
                         className={location.pathname === '/Projets' ? 'active' : ''}
-                        style={{ color: currentPage === '/Apropos' ? 'blue' : '' }}
+                        style={{ color: currentPage === '/Apropos' ? '#39375B' : '' }}
                     >
                         Projets
                     </motion.li>

@@ -110,7 +110,7 @@ body {
     color: white;
     font-size: 52px;
     font-weight: bold;
-    
+
   }
 
   .carousel-container {
@@ -120,7 +120,7 @@ body {
     transform: translateX(-50%);
     width: 90%;
     max-width: 1200px;
-    
+
 
     .description {
       font-weight: 400;
@@ -176,15 +176,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 20px; 
-height: auto;
+    margin-bottom: 20px;
+    height: auto;
   }
 
   .card img {
-    width: 100%; /* Assure que l'image occupe toute la largeur de la carte */
-    height: 200px; /* Réglez la hauteur de l'image */
-    object-fit: cover; /* Ajuste la taille de l'image sans déformer */
-    border-radius: 8px; 
+    width: 100%;
+    /* Assure que l'image occupe toute la largeur de la carte */
+    height: 200px;
+    /* Réglez la hauteur de l'image */
+    object-fit: cover;
+    /* Ajuste la taille de l'image sans déformer */
+    border-radius: 8px;
   }
 
   .card h2 {
@@ -304,16 +307,53 @@ height: auto;
 
 // Page a propos
 
+
 .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Aligner les badges au centre */
+  align-items: center; /* Centrer verticalement */
   position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 300px; /* Ajustez la largeur de l'ellipse */
-  height: 200px; /* Ajustez la hauteur de l'ellipse */
-  margin: 0 auto; /* Centrer la boîte horizontalement */
-  background: #4345;
-  border-radius: 50%; /* Pour créer une ellipse */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Ajuster la position au centre de la page */
+  width: 300px;
+  height: 200px;
+  background: #FFFFFF;
+  border-radius: 50%;
 
+  .badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: auto; /* Largeur du badge */
+    height: 60px; /* Hauteur du badge */
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    color: black;
+    padding: 10px;
+ 
+  }
+  
+  // Nombre de badges à positionner autour de .box
+  $totalBadges: 12;
+  
+  // Rayon de positionnement des badges autour de .box (augmenté pour plus d'espace)
+  $radius: 240px;
+
+  // Décalage vers la gauche
+$leftOffset: 70px;
+$topOffset : 10px;
+  
+@for $i from 1 through $totalBadges {
+  $angle: 360deg / $totalBadges * $i;
+  $x: cos($angle) * $radius;
+  $y: sin($angle) * $radius;
+  .badge:nth-child(#{$i}) {
+    top: calc(50% + #{$y} - #{$topOffset});
+    left: calc(50% + #{$x} - #{$leftOffset}); // Décalage vers la gauche
+  }
 }
-
-
+}
